@@ -18,7 +18,7 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("/tasks", (request, response) -> {
+    post("/tasks", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
 
       ArrayList<Task> tasks = request.session().attribute("tasks");
