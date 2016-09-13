@@ -31,4 +31,8 @@ public class Task {
    return instances;
  }
 
+  public static void clear() {
+    instances.clear();
+  }
+
 }
