@@ -1,10 +1,12 @@
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Task {
   private String mDescription;
   private boolean mCompleted;
   private LocalDateTime mCreatedAt;
-  private static ArrayList<Task> instances = new ArrayList<Task>();
+  private static List<Task> instances = new ArrayList<Task>();
 
   public Task(String description) {
     mDescription = description;
@@ -25,7 +27,7 @@ public class Task {
     return mCreatedAt;
   }
 
-  public static ArrayList<Task> all() {
+  public static List<Task> all() {
    return instances;
  }
 
