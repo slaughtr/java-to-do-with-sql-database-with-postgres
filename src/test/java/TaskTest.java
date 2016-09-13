@@ -32,8 +32,8 @@ public class TaskTest {
   public void all_returnsAllInstancesOfTask_true() {
     Task firstTask = new Task("Mow the lawn");
     Task secondTask = new Task("Buy groceries");
-    assertTrue(Task.all().contains(firstTask));
-    assertTrue(Task.all().contains(secondTask));
+    assertEquals(true, Task.all().contains(firstTask));
+    assertEquals(true, Task.all().contains(secondTask));
   }
 
 
