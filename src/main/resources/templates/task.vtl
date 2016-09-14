@@ -1,8 +1,6 @@
-#if ($task)
-  <h1>$task.getDescription()</h1>
-#else
-  <h1> Task not found </h1>
-#end
+<h1>$task.getDescription()</h1>
+<h2>Completed?:  $task.isCompleted()</h2>
+<h2>Created On:  $task.getCreatedAt()</h2>
 
 <a href="/tasks/new">Add another task</a>
 <a href="/tasks">All tasks</a>
