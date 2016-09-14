@@ -44,4 +44,11 @@ public class CategoryTest {
    assertEquals(Category.find(secondCategory.getId()), secondCategory);
  }
 
+  @Test
+  public void getTasks_initiallyReturnsEmptyList_ArrayList() {
+    Category.clear(); 
+    Category testCategory = new Category("Home");
+    assertEquals(0, testCategory.getTasks().size());
+  }
+
 }
