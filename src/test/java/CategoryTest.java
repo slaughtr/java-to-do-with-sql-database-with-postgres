@@ -14,5 +14,13 @@ public class CategoryTest {
     Category testCategory = new Category("Home");
     assertEquals("Home", testCategory.getName());
   }
-  
+
+  @Test
+  public void all_returnsAllInstancesOfCategory_true() {
+    Category firstCategory = new Category("Home");
+    Category secondCategory = new Category("Work");
+    assertTrue(Category.all().contains(firstCategory));
+    assertTrue(Category.all().contains(secondCategory));
+  }
+
 }
