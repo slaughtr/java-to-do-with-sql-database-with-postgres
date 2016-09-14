@@ -15,9 +15,11 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("tasks/new", (request, response) -> {
+    get("categories/:id/tasks/new", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      model.put("template", "templates/task-form.vtl");
+      Category category = Category.find(Integer.parseInt(request.params(":id")));
+      model.put("category", category);
+      model.put("template", "templates/category-tasks-form.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
