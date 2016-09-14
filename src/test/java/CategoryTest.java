@@ -8,4 +8,11 @@ public class CategoryTest {
     Category testCategory = new Category("Home");
     assertEquals(true, testCategory instanceof Category);
   }
+
+  @Test
+  public void getName_categoryInstantiatesWithName_Home() {
+    Category testCategory = new Category("Home");
+    assertEquals("Home", testCategory.getName());
+  }
+  
 }
