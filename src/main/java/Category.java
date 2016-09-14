@@ -18,4 +18,8 @@ public class Category {
    return instances;
  }
 
+ public static void clear() {
+   instances.clear();
+ }
+
 }

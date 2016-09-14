@@ -30,4 +30,10 @@ public class CategoryTest {
    assertEquals(Category.all().size(), 0);
  }
 
+ @Test
+ public void getId_categoriesInstantiateWithAnId_1() {
+   Category testCategory = new Category("Home");
+   assertEquals(1, testCategory.getId());
+ }
+
 }
