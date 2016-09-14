@@ -5,11 +5,13 @@ public class Category {
   private String mName;
   private static ArrayList<Category> instances = new ArrayList<Category>();
   private int mId;
+  private List<Task> mTasks;
 
   public Category(String name) {
     mName = name;
     instances.add(this);
     mId = instances.size();
+    mTasks = new ArrayList<Task>();
   }
 
   public String getName() {
@@ -31,5 +33,9 @@ public class Category {
   public static Category find(int id) {
    return instances.get(id - 1);
  }
+
+  public List<Task> getTasks() {
+    return mTasks;
+  }
 
 }
