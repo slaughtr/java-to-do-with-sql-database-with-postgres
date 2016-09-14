@@ -7,6 +7,7 @@ public class Category {
 
   public Category(String name) {
     mName = name;
+    instances.add(this);
   }
 
   public String getName() {

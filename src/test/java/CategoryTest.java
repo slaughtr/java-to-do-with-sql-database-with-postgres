@@ -19,8 +19,8 @@ public class CategoryTest {
   public void all_returnsAllInstancesOfCategory_true() {
     Category firstCategory = new Category("Home");
     Category secondCategory = new Category("Work");
-    assertTrue(Category.all().contains(firstCategory));
-    assertTrue(Category.all().contains(secondCategory));
+    assertEquals(true, Category.all().contains(firstCategory));
+    assertEquals(true, Category.all().contains(secondCategory));
   }
 
 }
