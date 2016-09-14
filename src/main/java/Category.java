@@ -4,4 +4,9 @@ public class Category {
   public Category(String name) {
     mName = name;
   }
+
+  public String getName() {
+    return mName;
+  }
+  
 }
