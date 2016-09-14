@@ -18,14 +18,18 @@ public class Category {
 
   public static ArrayList<Category> all() {
    return instances;
- }
+  }
 
  public static void clear() {
    instances.clear();
  }
 
- public int getId() {
+  public int getId() {
     return mId;
   }
+
+  public static Category find(int id) {
+   return instances.get(id - 1);
+ }
 
 }
