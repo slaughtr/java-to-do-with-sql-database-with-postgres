@@ -37,7 +37,7 @@ public class App {
       Task newTask = new Task(description);
       category.addTask(newTask);
       model.put("category", category);
-      model.put("template", "templates/category-tasks-success.vtl");
+      model.put("template", "templates/category-task-success.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
