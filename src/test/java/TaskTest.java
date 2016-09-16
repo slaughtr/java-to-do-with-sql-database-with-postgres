@@ -58,12 +58,12 @@ public class TaskTest {
     assertEquals(Task.all().size(), 0);
   }
 
-  // @Test
-  // public void getId_tasksInstantiateWithAnID_1() {
-  //   Task myTask = new Task("Mow the lawn");
-  //   myTask.save();
-  //   assertTrue(myTask.getId() instanceof Integer);
-  // }
+  @Test
+  public void getId_tasksInstantiateWithAnID_1() {
+    Task myTask = new Task("Mow the lawn");
+    myTask.save();
+    assertTrue(myTask.getId() > 0);
+  }
 
   @Test
   public void find_returnsTaskWithSameId_secondTask() {
