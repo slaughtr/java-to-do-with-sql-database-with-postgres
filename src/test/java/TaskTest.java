@@ -4,6 +4,11 @@ import java.time.LocalDateTime;
 
 public class TaskTest {
 
+  @Before
+  public void setUp() {
+    DB.sql2o = new Sql2o("jdbc:postgresql://localhost:5432/to_do_test", null, null);
+  }
+
   @Test
   public void Task_instantiatesCorrectly_true() {
     Task myTask = new Task("Mow the lawn");
