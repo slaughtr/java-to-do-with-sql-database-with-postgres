@@ -34,6 +34,16 @@ public class Task {
     }
   }
 
+  @Override
+  public boolean equals(Object otherTask) {
+    if (!(otherTask instanceof Task)) {
+      return false;
+    } else {
+      Task newTask = (Task) otherTask;
+      return this.getDescription().equals(newTask.getDescription());
+    }
+  }
+
   public static void clear() {
   }
 
