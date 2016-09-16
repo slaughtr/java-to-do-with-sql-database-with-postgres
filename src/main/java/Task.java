@@ -13,7 +13,6 @@ public class Task {
     description = description;
     completed = false;
     createdAt = LocalDateTime.now();
-    id = instances.size();
   }
 
   public String getDescription() {
@@ -39,10 +38,9 @@ public class Task {
   }
 
   public int getId() {
-   return id;
- }
+  }
 
- public static Task find(int id) {
- }
+  public static Task find(int id) {
+  }
 
 }
