@@ -62,12 +62,14 @@ public class TaskTest {
   //   assertEquals(1, myTask.getId());
   // }
   //
-  // @Test
-  // public void find_returnsTaskWithSameId_secondTask() {
-  //   Task firstTask = new Task("Mow the lawn");
-  //   Task secondTask = new Task("Buy groceries");
-  //   assertEquals(Task.find(secondTask.getId()), secondTask);
-  // }
+  @Test
+  public void find_returnsTaskWithSameId_secondTask() {
+    Task firstTask = new Task("Mow the lawn");
+    firstTask.save();
+    Task secondTask = new Task("Buy groceries");
+    secondTask.save();
+    assertEquals(Task.find(secondTask.getId()), secondTask);
+  }
 
   @Test
   public void equals_returnsTrueIfDescriptionsAretheSame() {
