@@ -7,7 +7,7 @@ public class Task {
   private String description;
   private boolean completed;
   private LocalDateTime createdAt;
-  private int id; 
+  private int id;
 
   public Task(String description) {
     this.description = description;
@@ -35,30 +35,34 @@ public class Task {
   }
 
   @Override
-  public boolean equals(Object otherTask) {
+  public boolean equals(Object otherTask){
     if (!(otherTask instanceof Task)) {
       return false;
     } else {
       Task newTask = (Task) otherTask;
-      return this.getDescription().equals(newTask.getDescription());
+      return this.getDescription().equals(newTask.getDescription()) &&
+             this.getId() == newTask.getId();
     }
   }
 
   public void save() {
    try(Connection con = DB.sql2o.open()) {
-     String sql = "INSERT INTO tasks (description) VALUES (:description)";
-     con.createQuery(sql)
+     String sql = "INSERT INTO tasks(description) VALUES (:description)";
+     this.id = (int) con.createQuery(sql, true)
        .addParameter("description", this.description)
-       .executeUpdate();
+       .executeUpdate()
+       .getKey();
    }
  }
-
 
   // public static void clear() {
   // }
   //
-  // public int getId() {
-  // }
+
+  public int getId() {
+    return id;
+  }
+  
   //
   // public static Task find(int id) {
   // }
