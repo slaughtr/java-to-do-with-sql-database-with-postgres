@@ -7,10 +7,9 @@ public class Task {
   private String description;
   private boolean completed;
   private LocalDateTime createdAt;
-  private int id;
 
   public Task(String description) {
-    description = description;
+    this.description = description;
     completed = false;
     createdAt = LocalDateTime.now();
   }
@@ -44,13 +43,13 @@ public class Task {
     }
   }
 
-  public static void clear() {
-  }
-
-  public int getId() {
-  }
-
-  public static Task find(int id) {
-  }
+  // public static void clear() {
+  // }
+  //
+  // public int getId() {
+  // }
+  //
+  // public static Task find(int id) {
+  // }
 
 }
