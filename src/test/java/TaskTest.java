@@ -53,13 +53,11 @@ public class TaskTest {
   @Test
   public void clear_emptiesAllTasksFromArrayList_0() {
     Task myTask = new Task("Mow the lawn");
-    Task.clear();
     assertEquals(Task.all().size(), 0);
   }
 
   @Test
   public void getId_tasksInstantiateWithAnID_1() {
-    Task.clear();
     Task myTask = new Task("Mow the lawn");
     assertEquals(1, myTask.getId());
   }
