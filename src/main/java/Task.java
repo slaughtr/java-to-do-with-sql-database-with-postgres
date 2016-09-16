@@ -7,6 +7,7 @@ public class Task {
   private String description;
   private boolean completed;
   private LocalDateTime createdAt;
+  private int id; 
 
   public Task(String description) {
     this.description = description;
